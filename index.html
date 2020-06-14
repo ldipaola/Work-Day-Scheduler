@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Day Scheduler</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="./styles/materialize.css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link type="text/css" rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-            <h4 class="center-align">Work Day Scheduler</h4>
-            <div class="divider"></div> 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12"><span class="flow-text" id="current-date">07/06/2020</span></div>
-    </div>
-        <div id="day-planner"></div>
-    </div>
-</div>
+
+            <div class="wrapper">
+                <header>
+                    <h4 class="heading">Work Day Scheduler</h4>
+                    <div id="current-date" class="current-date">07/06/2020</div>
+                    <div class='clear'><a class="clear-schedule" href="#"><i class="fas fa-sync"></i></a></div>
+                </header>
+        <section class="random-fact-section">
+            <h5 class="span-fact">Did you know?</h5>
+            <p id="random-fact"></p>
+        </section>
+    
+            <main>
+                <section id="day-planner" class="planner">
+                        
+                    </div>
+                </section>
+            </main>
+            </div>
 
 
 
 
-
-<script src="./scripts/moment.js"></script>
-<script type="text/javascript" src="./scripts/materialize.js"></script>   
+<script src="./scripts/moment.js"></script>   
 <script type="text/javascript" src="./scripts/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,156 @@
-div {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+}
+.heading {
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+}
+/* .time {
+    display: inline;
+} */
+.span-fact {
+    padding-right: 0.5rem;
+}
+
+p#random-fact, .span-fact {
+    font-size: clamp(1rem, 2.5vw, 1.25rem); 
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(50px, auto);
+
+}
+h4.heading, h5#current-date.current-date {
+    margin: auto;
+}
+
+.planner{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    gap: .5em;
+    width: 100%;
+}
+/* .planner-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+} */
+
+.btn{
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    --accent-color: #0AF;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: transform 500ms ease-in-out ;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+.btn:hover::before,
+.btn:focus::before {
+    transform: scaleX(1);
+    
+}
+.time-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    gap: .5em;
+    width: 100%;
+}
+.planner-row{
+    grid-column: 2 / 8;
+
+}
+
+ul {
+    list-style: none;
+}
+input[type=text] {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+.clear-schedule:hover {
+    color: red;
+}
+
+.heading, .current-date, {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#random-fact {
+    margin-bottom: 2rem;
+}
+
+.grey {
+    background-color: rgb(105, 105, 105, 0.25);
+
+}
+
+.orange {
+    background-color: rgb(255, 153, 51, 0.25);
+}
+
+.green {
+    background-color: rgb(0, 235, 0, 0.25);
+}
+.red {
+    background-color: red;
+}
+
+.radius {
+    border-radius: 5px;
+}
+li {
+    margin-left: 1em;
+}
+
+.wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .wrapper {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .wrapper {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .wrapper {
+      width: 1170px;
+    }
+  }
+    
