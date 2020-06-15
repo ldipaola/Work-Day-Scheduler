@@ -1,5 +1,6 @@
 # Work-Day-Scheduler
 
+Daily planner to create a schedule
 
 
 # Goal
@@ -13,3 +14,7 @@ Clicking on the refresh icon will clear all items from the schedule and local st
 
 
 ![Scheduler demo](screen-shot.PNG)
+
+# Deployed Project
+
+https://ldipaola.github.io/Work-Day-Scheduler/
