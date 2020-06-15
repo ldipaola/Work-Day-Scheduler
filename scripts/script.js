@@ -97,7 +97,7 @@ renderPlanner();
     
     function renderPlanner () {
     plannerItems.forEach(function(item, index){
-        var timeSlotContainer = $('<div class="time-container radius">');
+        var timeSlotContainer = $('<div class="time-container radius popout">');
         var plannerTimeEl = $('<div class="planner-row" data-number=' + index +'>');
         var timeSlot = $('<div class="time-span">');
         var plannerList = $('<ul class="time-slot-list">');
@@ -121,7 +121,7 @@ renderPlanner();
 }
 
     function addInput() {
-        var input = $('<input class="item-input" type="text" placeholder=" add item">');
+        var input = $('<input class="item-input" type="text" placeholder=" Add item">');
         if ($(this).find('input').length < 1) {
             $(this).append(input);
             input.focus();
@@ -136,10 +136,8 @@ renderPlanner();
         li.append(createSpan);
         li.text($(this).val() );
         $(this).parent().find('ul').append(li);
-        console.log($(this).parent().data('number'));
         plannerItems[$(this).parent().data('number')].items.push($(this).val());
         localStorage.setItem("planner-items", JSON.stringify(plannerItems));
-        console.log(plannerItems)
         $(this).remove();
     }
 
@@ -155,7 +153,6 @@ renderPlanner();
         localStorage.removeItem('planner-items');
         $('#day-planner').empty();
         setPlanner();
-        console.log('you cleared me')
     })
 
 

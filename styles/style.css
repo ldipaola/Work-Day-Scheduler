@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+
+    font-family: 'Roboto', sans-serif;
+
+}
 body {
     background-color: rgb(255, 255, 255);
     min-height: 100vh;
@@ -30,6 +35,13 @@ header {
 h4.heading, h5#current-date.current-date {
     margin: auto;
 }
+h4 {
+    font-family: 'MuseoModerno', cursive;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
 
 .planner{
     display: grid;
@@ -56,25 +68,8 @@ h4.heading, h5#current-date.current-date {
     --accent-color: #0AF;
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background-color: var(--accent-color);
-    transition: transform 500ms ease-in-out ;
-    transform: scaleX(0);
-    transform-origin: left;
-
-}
-.btn:hover::before,
-.btn:focus::before {
-    transform: scaleX(1);
     
-}
+
 .time-container{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -88,11 +83,13 @@ h4.heading, h5#current-date.current-date {
 }
 
 ul {
-    list-style: none;
+    list-style-type: square;
 }
+
+  
 input[type=text] {
     width: 100%;
-    height: auto;
+    height: 2em;
     border-radius: 4px;
   }
 .clear-schedule:hover {
@@ -107,6 +104,13 @@ input[type=text] {
 
 #random-fact {
     margin-bottom: 2rem;
+}
+.time-container {
+    transition: transform .2s;
+
+}
+.time-container:hover {
+    transform: scale(1.025);
 }
 
 .grey {
@@ -138,6 +142,21 @@ li {
     margin-right: auto;
     margin-left: auto;
   }
+
+.popout {
+    animation: popout 1s ease;
+    -webkit-animation: popout 1s ease;
+}
+@keyframes popout {
+    from{transform:scale(0)}
+    80%{transform:scale(1.2)}
+    to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.2)}
+    to{-webkit-transform:scale(1)}
+}
   @media (min-width: 768px) {
     .wrapper {
       width: 750px;
