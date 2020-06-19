@@ -8,6 +8,9 @@ html {
     font-family: 'Roboto', sans-serif;
 
 }
+section {
+    margin-bottom: 2.5em;
+}
 body {
     background-color: rgb(255, 255, 255);
     min-height: 100vh;
